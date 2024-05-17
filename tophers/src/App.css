@@ -120,7 +120,26 @@
   position: relative;
   top: 10%;
 }
+.centered-title {
+  text-align: center;
+}
 
+.review-box-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.review-box {
+  width: 30%;
+  border: 1px solid #000;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.review-box img {
+  width: 100%;
+  height: auto;
+}
 .contact-button {
   display: block;
   width: 200px;
