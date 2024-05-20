@@ -1,20 +1,32 @@
+import React, { useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import './Carousel.css';
+import images from '../images';
+import Slide from './Slide';
 
-// Import all images from the workpics folder
-const importAll = (r) => r.keys().map((item) => ({ workpics: r(item).default }));
-const images = importAll(require.context('../../public/workpics', false, /\.(png|jpe?g|svg)$/));
+const MyComponent = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-const MyCarousel = () => {
+  const nextSlide = () => {
+    setCurrentSlide((currentSlide + 1) % images.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((currentSlide - 1 + images.length) % images.length);
+  };
+
   return (
-    <Carousel>
-      {images.map((image, index) => (
-        <div key={index}>
-          <img src={image.workpics} alt={`Slide ${index + 1}`} />
-        </div>
-      ))}
-    </Carousel>
+    <div className="carousel">
+      <button className="carousel-arrow carousel-arrow-left" onClick={prevSlide}>&lt;</button>
+      <Carousel showThumbs={true} selectedItem={currentSlide} onChange={setCurrentSlide}>
+        {images.map((image, index) => (
+          <Slide image={image} index={index} key={index} />
+        ))}
+      </Carousel>
+      <button className="carousel-arrow carousel-arrow-right" onClick={nextSlide}>&gt;</button>
+    </div>
   );
 };
 
-export default MyCarousel;
+export default MyComponent;

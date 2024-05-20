@@ -1,0 +1,75 @@
+/* Carousel.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.carousel {
+    display: flex;
+    flex-direction: column;
+    /* Stack the main image and thumbnails vertically */
+    align-items: center;
+    /* Center the carousel slider and thumbnails horizontally */
+    position: relative;
+    /* Add this to position the arrows relative to the carousel */
+}
+
+.carousel .carousel-slider {
+    width: 80%;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel img {
+    max-width: 50%;
+    /* Set the maximum width of the image to 50% of its container */
+    max-height: 100%;
+    /* Set the maximum height of the image to 50% of its container */
+    object-fit: contain;
+    /* Make the image maintain its aspect ratio while fitting within its container */
+}
+
+.carousel .thumbs {
+    display: flex;
+    /* Display thumbnails in a row */
+    justify-content: center;
+    /* Center thumbnails horizontally */
+    width: 70%;
+    /* Set the width of the thumbnails to 70% */
+}
+
+.carousel .thumb {
+    flex-grow: 1;
+    /* Allow the thumbnails to grow and shrink as needed */
+    max-width: 120px;
+    /* Set a larger maximum width for the thumbnails */
+    height: 120px;
+    /* Set a larger fixed height for the thumbnails */
+    object-fit: cover;
+    /* Make the images cover the whole thumbnail */
+    margin: 0 5px;
+    /* Add some margin between the thumbnails */
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carousel-arrow-left {
+    left: 15%;
+    top: 35%
+}
+
+.carousel-arrow-right {
+    right: 15%;
+    top: 35%
+}

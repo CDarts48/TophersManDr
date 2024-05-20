@@ -4,7 +4,7 @@ import CookieConsent from "react-cookie-consent";
 import MyCarousel from './components/Carousel'; // Updated import
 
 const importAll = (r) => r.keys().map((item) => ({ workpics: r(item).default }));
-const images = importAll(require.context('../public/workpics', false, /\.(png|jpe?g|svg)$/));
+const images = importAll(require.context('../src/workpics', false, /\.(png|jpe?g|svg)$/));
 
 const App = () => {
   return (

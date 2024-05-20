@@ -118,7 +118,7 @@
   font-family: 'Arial', sans-serif;
   font-size: 1.2em;
   position: relative;
-  top: 10%;
+  top: 15%;
 }
 .centered-title {
   text-align: center;
@@ -132,7 +132,7 @@
 .review-box {
   width: 30%;
   border: 1px solid #000;
-  padding: 20px;
+  padding: 10px;
   box-sizing: border-box;
 }
 
@@ -152,7 +152,7 @@
   font-size: 18px;
   cursor: pointer;
   position: relative;
-  top: 10%;
+  top: 15%;
 }
 
 .footer {
@@ -215,4 +215,13 @@
 .CookieConsent button {
   color: #4e503b;
   font-size: 13px;
+}
+
+/* App.css */
+#section3 h1 {
+  margin-bottom: 0; /* No bottom margin */
+}
+
+#section3 #slideshow {
+  margin-top: 0; /* No top margin */
 }
