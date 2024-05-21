@@ -8,50 +8,29 @@
 .carousel {
     display: flex;
     flex-direction: column;
-    /* Stack the main image and thumbnails vertically */
     align-items: center;
-    /* Center the carousel slider and thumbnails horizontally */
     position: relative;
-    /* Add this to position the arrows relative to the carousel */
 }
 
-.carousel .carousel-slider {
-    width: 80%;
-    height: 800px;
+.carousel .slide {
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end; /* align items to the bottom */
+    margin-top: 5%;
 }
 
+
+  .thumbs-wrapper.axis-vertical {
+    display: flex;
+    align-items: start;
+  }
+  
 .carousel img {
-    max-width: 50%;
-    /* Set the maximum width of the image to 50% of its container */
-    max-height: 100%;
-    /* Set the maximum height of the image to 50% of its container */
-    object-fit: contain;
-    /* Make the image maintain its aspect ratio while fitting within its container */
-}
-
-.carousel .thumbs {
-    display: flex;
-    /* Display thumbnails in a row */
-    justify-content: center;
-    /* Center thumbnails horizontally */
-    width: 70%;
-    /* Set the width of the thumbnails to 70% */
-}
-
-.carousel .thumb {
-    flex-grow: 1;
-    /* Allow the thumbnails to grow and shrink as needed */
-    max-width: 120px;
-    /* Set a larger maximum width for the thumbnails */
-    height: 120px;
-    /* Set a larger fixed height for the thumbnails */
-    object-fit: cover;
-    /* Make the images cover the whole thumbnail */
-    margin: 0 5px;
-    /* Add some margin between the thumbnails */
+    max-width: 40%; /* reduced from 50% to make the image smaller */
+    max-height: 80%; /* reduced from 100% to make the image smaller */
+    object-fit: content;
 }
 
 .carousel-arrow {
@@ -73,3 +52,42 @@
     right: 15%;
     top: 35%
 }
+
+.review-box img {
+    width: 100%;
+    height: auto;
+    border: none;
+}
+
+.thumbs {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.thumb {
+    display: inline-block;
+    margin: 0 5px;
+    overflow: auto;
+}
+
+.thumb img {
+    width: 100px;
+    height: 100px;
+}
+
+.carousel .thumb {
+    display: contents;
+}
+
+.carousel .thumbs-wrapper {
+    margin-top: 0;
+  }
+
+  .carousel-image {
+    border: 1px solid #ccc; /* adjust as needed */
+    width: 50%; /* adjust as needed */
+    height: 30%; 
+  }
+
+ 

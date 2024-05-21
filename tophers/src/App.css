@@ -100,17 +100,6 @@
 .centered-title {
   text-align: center;
 }
-.box {
-  width: 30%;
-  margin: 1em;
-  padding: 1em;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.box img {
-  width: 100%;
-  height: auto;
-}
 
 .subtext {
   color: white;
@@ -120,9 +109,7 @@
   position: relative;
   top: 15%;
 }
-.centered-title {
-  text-align: center;
-}
+
 
 .review-box-container {
   display: flex;
@@ -135,6 +122,14 @@
   padding: 10px;
   box-sizing: border-box;
 }
+ 
+#section3{
+  margin-top: 5%;
+}
+.control-dots{
+  display: none;
+}
+
 
 .review-box img {
   width: 100%;
@@ -217,11 +212,3 @@
   font-size: 13px;
 }
 
-/* App.css */
-#section3 h1 {
-  margin-bottom: 0; /* No bottom margin */
-}
-
-#section3 #slideshow {
-  margin-top: 0; /* No top margin */
-}
