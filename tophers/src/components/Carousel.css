@@ -33,31 +33,25 @@
     object-fit: content;
 }
 
-.carousel-arrow {
+.control-arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.7);
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-}
-
-.carousel-arrow-left {
-    left: 15%;
-    top: 35%
-}
-
-.carousel-arrow-right {
-    right: 15%;
-    top: 35%
-}
-
-.review-box img {
+  }
+  
+  .control-next {
+    right: 15%; /* adjust this value to move the arrow closer or farther from the image */
+  }
+  
+  .control-prev {
+    left: 15%; /* adjust this value to move the arrow closer or farther from the image */
+  }
+  
+  .review-box img {
     width: 100%;
     height: auto;
     border: none;
-}
+  }
 
 .thumbs {
     overflow-x: auto;
