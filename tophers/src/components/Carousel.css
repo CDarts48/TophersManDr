@@ -1,74 +1,72 @@
-
 .carousel .slide {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end; /* align items to the bottom */
-    margin-top: 5%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  /* align items to the bottom */
+  margin-top: 5%;
 }
 
 
-  .thumbs-wrapper.axis-vertical {
-    display: flex;
-    align-items: start;
-  }
-  
 .carousel img {
-    max-width: 40%; /* reduced from 50% to make the image smaller */
-    max-height: 80%; /* reduced from 100% to make the image smaller */
-    object-fit: content;
+  max-width: 40%;
+  /* reduced from 50% to make the image smaller */
+  max-height: 80%;
+  /* reduced from 100% to make the image smaller */
+  object-fit: content;
 }
 
-.control-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  
-  .control-next {
-    right: 15%; /* adjust this value to move the arrow closer or farther from the image */
-  }
-  
-  .control-prev {
-    left: 15%; /* adjust this value to move the arrow closer or farther from the image */
-  }
-  
-  .review-box img {
-    width: 100%;
-    height: auto;
-    border: none;
-  }
+
+.review-box img {
+  width: 100%;
+  height: auto;
+  border: none;
+}
 
 .thumbs {
-    overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap;
+  overflow-x: auto;
+  /* overflow-y: hidden; */
+  white-space: nowrap;
 }
 
 .thumb {
-    display: inline-block;
-    margin: 0 5px;
-    overflow: auto;
+  display: inline-block;
+  margin: 0 5px;
+  overflow: auto;
 }
 
 .thumb img {
-    width: 100px;
-    height: 100px;
+  width: 100px;
+  height: 100px;
 }
 
 .carousel .thumb {
-    display: contents;
+  display: contents;
 }
 
 .carousel .thumbs-wrapper {
-    margin-top: 0;
-  }
+  margin-top: 0;
+}
 
-  .carousel-image {
-    border: 1px solid #ccc; /* adjust as needed */
-    width: 50%; /* adjust as needed */
-    height: 30%; 
-  }
+.carousel-image {
+  border: 1px solid #ccc;
+  /* adjust as needed */
+  width: 50%;
+  /* adjust as needed */
+  height: 30%;
+}
 
- 
+.control-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: black; /* makes the arrow's background black */
+  color: white; /* makes the arrow's color white */
+  border: none; /* removes the default button border */
+  padding: 10px; /* adds some space around the arrow */
+}
+
+.control-prev {
+  left: 15%; /* adjust this value to move the arrow closer or farther from the image */
+}
